@@ -1,35 +1,41 @@
 # Open-Unroll ✉️
 
-**Open-Unroll** is an AI-powered Gmail assistant designed to help you reclaim control of your inbox. Built with **Streamlit**, **Langchain**, and **ChatGroq**, it intelligently prioritizes important emails, automates the cleanup of unwanted mail, and provides powerful tools for managing your mail box and optimizing it—all in one clean, intuitive interface.
+# ✉️ Open-Unroll
+
+**Open-Unroll** is an AI-powered Gmail assistant that helps you reclaim control of your inbox. Built with **Streamlit**, **LangChain**, and **ChatGroq**, it intelligently prioritizes important emails, automates cleanup, and offers smart tools for inbox optimization—all within a simple interface.
 
 ---
 
-## Demo Video 🎥
-A link to a demo video would go here, showcasing the app in action. For example: [demo.mp4](assets/demo.mp4)
+## 🎥 Demo Video
+
+Watch the app in action: [demo.mp4](assets/demo.mp4) <!-- Replace with actual link -->
 
 ---
 
-## 🚀 Features
+## 🚀 Key Features
 
-### Intelligent Inbox Management
-- **AI-Powered Prioritization:** Uses a custom ranking model to score emails from 1 (least important) to 10 (extremely important), helping you focus on what matters most.
-- **Concise Summaries:** Get a quick overview of any email or attachment. The application uses Langchain and ChatGroq to generate a clear summary of the content.
-- **Customizable Time Frame:** Filter and process emails from the past hour, day, week, or any time window you choose.
+### 🔍 Intelligent Inbox Management
+- **AI-Powered Prioritization:** Assigns importance scores (1–10) to help you focus on your most relevant emails.
+- **Summarization:** Uses LangChain and ChatGroq to generate concise summaries of emails and attachments.
+- **Time-Based Filtering:** Analyze emails by hour, day, week, or a custom time range.
 
-### Automated Cleanup & Optimization
-- **Effortless Unsubscribe:** Intelligently identifies and unsubscribes from unwanted promotional emails and newsletters. It even checks for "unsubscribe" links in headers and HTML, then preserves important newsletters (like career or educational content) by classifying them with AI.
-- **Spam & Phishing Detection:** Proactively scans your inbox for suspicious emails and phishing attempts, flagging them for your review.
-- **One-Click Cleanup:** Quickly and automatically deletes old emails from categories like promotions and social, based on a configurable age (e.g., older than 7 days).
-- **Batch Processing:** Processes promotional emails in batches to ensure polite interaction with servers and stable performance.
+### 🧹 Automated Email Cleanup
+- **Smart Unsubscribe:** Automatically identifies and unsubscribes from promotional emails while preserving valuable newsletters (e.g., job alerts, educational content).
+- **Phishing & Spam Detection:** Flags suspicious or malicious emails.
+- **One-Click Cleanup:** Deletes old promotional and social emails based on a configurable age.
+- **Batch Processing:** Handles email operations efficiently to ensure stability.
 
-### Seamless Integration & Tools
-- **Interactive Chat Mode:** Engage with your inbox through a conversational chat interface to ask queries about your emails and get real-time insights.
-- **Categorization:** Automatically categorizes recent emails into groups like Work, Personal, Finance, Shopping, Social, and Other for better organization.
-- **Attachment Support:** Summarizes a variety of attachments using MarkItDown to provide a clear, readable overview of their content.
+### 💬 Conversational Email Assistant
+- **Interactive Chat:** Ask questions about your inbox and get real-time insights.
+- **Natural Language Queries:** Get summaries, stats, or specific answers about senders, topics, and timeframes.
+
+### 🗂️ Smart Categorization & Attachment Support
+- **Auto-Categorization:** Groups emails into categories like Work, Personal, Finance, Social, etc.
+- **Attachment Intelligence:** Extracts and summarizes content from PDFs, Word docs, Excel sheets, and images using **MarkItDown**.
 
 ---
 
-## 🔧 Installation & Setup
+## 🔧 Installation
 
 ### 1. Clone the Repository
 ```bash
@@ -76,58 +82,21 @@ streamlit run app.py
 
 ## 🎯 How to Use
 
-### 1. Initial Setup
 - Launch the app: `streamlit run src/app.py`
-- Upload your Gmail `client_secret.json` file
-- Complete OAuth authentication in the browser
-- Set your Groq API key in the `.env` file
+- Authenticate: Upload your Gmail `client_secret.json` and complete the OAuth flow.
+- Set Timeframe: Choose the time range you want to process (e.g., last 24 hours).
+- Prioritize Emails: Click "Fetch & Prioritize Emails" to get AI-ranked messages.
+- Explore Tools:
+   - View your top 5 important emails.
+   - Categorize inbox contents.
+   - Detect spam and phishing.
+   - Clean up old or unwanted emails.
+- Use Chat Assistant: Ask natural language questions to explore and summarize inbox data.
 
-### 2. Email Prioritization
-- Select your desired timeframe (1 hour to 2 weeks)
-- Click "Fetch & Prioritize Emails"
-- Review AI-scored important emails in the dashboard
-- Identify emails that need replies
 
-### 3. Smart Tools
-- **Priority Inbox**: View top 5 most important emails
-- **Categorization**: Organize emails by topic automatically
-- **Security Scan**: Detect phishing and scam attempts
-- **Cleanup Tools**: Remove spam, old promotions, and social notifications
-
-### 4. Chat Interface
-- Ask natural language questions about your emails
-- Get insights about specific senders, topics, or timeframes
-- Receive AI-powered summaries and recommendations
 
 ---
 
-## 🔧 Advanced Features
-
-### Intelligent Unsubscription
-The app can intelligently unsubscribe from unwanted promotional emails while preserving important content:
-
-- **Smart Classification**: Distinguishes between spam and valuable newsletters
-- **Preserves Important Content**: Keeps job alerts, educational content, financial updates
-- **Batch Processing**: Handles large volumes efficiently
-- **Safety First**: Optional verification before unsubscribing
-
-### Attachment Intelligence
-Process and understand email attachments automatically:
-
-- **Multi-Format Support**: PDFs, Word docs, Excel sheets, images
-- **Content Extraction**: Uses MarkItDown for accurate text extraction
-- **AI Summarization**: Generates concise summaries of attachment content
-- **Visual Formatting**: Clean, readable presentation of results
-
-### Time-Based Analytics
-Flexible timeframe analysis for different use cases:
-
-- **Recent Activity**: 1-6 hours for immediate action items
-- **Daily Review**: 24 hours for end-of-day processing
-- **Weekly Cleanup**: 1-2 weeks for bulk management
-- **Custom Ranges**: Adaptable to your workflow needs
-
----
 
 ## 🛡️ Security & Privacy
 
