@@ -1,3 +1,8 @@
 venv/
 .env
 *.zip
+*.tar.gz
+*.log
+client_secret.json
+src/gmail_token.json
+src/client_secret_*.json

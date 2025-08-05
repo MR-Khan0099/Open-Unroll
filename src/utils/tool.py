@@ -341,8 +341,6 @@ def unsubscribe_promotions():
         - Job opportunities and career-related
         - Educational content, courses, learning
         - Professional development
-        - Industry news and insights
-        - Financial/Investment newsletters
         - Health and wellness content
         - Technology updates and tutorials
         - Research and academic content
@@ -353,6 +351,17 @@ def unsubscribe_promotions():
         - Entertainment newsletters
         - Spam-like content
         - Generic promotional content
+        - Unsolicited offers
+        - Event Invitations
+        - Survey Requests
+        - Social Media Notifications
+        - Unsolicited newsletters
+        - Unrelated content
+        - Industry news and insights
+        - Financial/Investment newsletters
+        
+        Classify the email based on the subject, sender, and snippet.
+        Return only the classification as either IMPORTANT or UNIMPORTANT.
         
         Respond with only: IMPORTANT or UNIMPORTANT"""),
         ("human", "Subject: {subject}\nSender: {sender}\nSnippet: {snippet}")
