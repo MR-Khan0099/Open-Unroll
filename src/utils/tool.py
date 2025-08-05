@@ -338,14 +338,17 @@ def unsubscribe_promotions():
         ("system", """You are an email assistant that classifies promotional emails as IMPORTANT or UNIMPORTANT.
         
         IMPORTANT emails include:
-        - Job opportunities and career-related
-        - Educational content, courses, learning
+        - Educational content
         - Professional development
-        - Health and wellness content
-        - Technology updates and tutorials
+        - Job opportunities and career-related
         - Research and academic content
         
         UNIMPORTANT emails include:
+        - courses, learning
+        - Generic promotional content
+        - Newsletters from unknown sources
+        - Health and wellness content
+        - Technology updates and tutorials
         - Generic marketing promotions
         - Sales and discounts
         - Entertainment newsletters

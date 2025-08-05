@@ -1,11 +1,22 @@
+<!-- Logo -->
+<p align="center">
+  <img src="assets/logo.png" alt="InboxHero Logo" width="600" height = "300">
+</p>
+
 # Open-Unroll ✉️
 
 **Open-Unroll** is an AI-powered Gmail assistant that helps you reclaim control of your inbox. Built with **Streamlit**, **LangChain**, and **ChatGroq**, it intelligently prioritizes important emails, automates cleanup, and offers smart tools for inbox optimization—all within a simple, user-friendly interface.
+
 ---
 
 ## 🎥 Demo Video
 
-Watch the app in action: [demo.mp4](assets/demo.mp4) <!-- Replace with actual link -->
+<!-- Watch the app in action: [demo.mp4](assets/demo.mp4) Replace with actual link -->
+<p align="center">
+  <img src="assets/demo.gif" alt="alt text" />
+</p>
+
+
 
 ---
 
