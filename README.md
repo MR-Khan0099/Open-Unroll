@@ -1,6 +1,7 @@
 # Open-Unroll ✉️
 
 **Open-Unroll** is an AI-powered Gmail assistant that helps you reclaim control of your inbox. Built with **Streamlit**, **LangChain**, and **ChatGroq**, it intelligently prioritizes important emails, automates cleanup, and offers smart tools for inbox optimization—all within a simple, user-friendly interface.
+
 ---
 
 ## 🎥 Demo Video
