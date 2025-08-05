@@ -1,172 +1,100 @@
 # Open-Unroll ✉️
 
-**Open-Unroll** is an intelligent Gmail management and productivity suite built with **Streamlit**, **LangChain**, and **ChatGroq**. It empowers users to efficiently manage their inbox through AI-powered prioritization, smart automation, and comprehensive email analysis tools.
+**Open-Unroll** is an AI-powered Gmail assistant designed to help you reclaim control of your inbox. Built with **Streamlit**, **Langchain**, and **ChatGroq**, it intelligently prioritizes important emails, automates the cleanup of unwanted mail, and provides powerful tools for managing your mail box and optimizing it—all in one clean, intuitive interface.
 
 ---
 
-## Demo Video - Open-Unroll 🎥
-
-
-
----
-
-## ✨ Key Features
-
-### � **Smart Email Prioritization**
-- **AI-Powered Importance Scoring:** Uses advanced LLM models to score emails from 1-10 based on urgency and importance
-- **Customizable Time Frames:** Filter emails by various time windows (1 hour to 2 weeks)
-- **Non-Promotional Focus:** Automatically filters out promotional emails for better signal-to-noise ratio
-- **Visual Priority Dashboard:** Clean, professional interface displaying top important emails
-
-### 🤖 **Intelligent Email Management Tools**
-- **Email Categorization:** Automatically sorts emails into categories (Work, Personal, Finance, Shopping, Social, Updates, Other)
-- **Phishing & Scam Detection:** Proactively identifies suspicious emails using AI analysis
-- **Reply Detection:** Identifies emails that require responses and highlights them
-- **Draft Generation:** AI-powered draft responses for quick email replies
-
-### 🗂️ **Advanced Attachment Processing**
-- **Multi-Format Support:** Processes PDFs, DOCX, Excel sheets, and various Microsoft Office formats
-- **Automatic Summarization:** Uses MarkItDown to extract and summarize attachment content
-- **Smart Content Analysis:** AI-powered summaries of attachment contents for quick understanding
-
-### 🧹 **Inbox Cleanup & Automation**
-- **Smart Spam Removal:** Intelligent spam detection and removal with optional LLM verification
-- **Promotional Email Management:** Bulk deletion of old promotional emails (configurable timeframe)
-- **Social Media Cleanup:** Automated removal of old social media notifications
-- **Intelligent Unsubscription:** AI-powered unsubscription from unwanted promotional emails while preserving important newsletters
-
-### 💬 **Interactive Chat Interface**
-- **Conversational Email Queries:** Ask natural language questions about your emails
-- **Real-time Insights:** Get instant answers about email content, senders, and patterns
-- **Context-Aware Responses:** AI understands your email context for more relevant answers
-
-### ⚙️ **Professional Features**
-- **GitHub Dark Theme UI:** Modern, professional interface optimized for productivity
-- **Session Management:** Secure handling of multiple user sessions
-- **Flexible Time Controls:** Multiple timeframe options for different use cases
-- **Responsive Design:** Optimized for various screen sizes and devices
+## Demo Video 🎥
+A link to a demo video would go here, showcasing the app in action. For example: [demo.mp4](assets/demo.mp4)
 
 ---
 
-## 🚀 Installation & Setup
+## 🚀 Features
 
-### Prerequisites
-- Python 3.8 or higher
-- Gmail account with API access enabled
-- Groq API key for AI functionality
+### Intelligent Inbox Management
+- **AI-Powered Prioritization:** Uses a custom ranking model to score emails from 1 (least important) to 10 (extremely important), helping you focus on what matters most.
+- **Concise Summaries:** Get a quick overview of any email or attachment. The application uses Langchain and ChatGroq to generate a clear summary of the content.
+- **Customizable Time Frame:** Filter and process emails from the past hour, day, week, or any time window you choose.
 
-### Quick Start
+### Automated Cleanup & Optimization
+- **Effortless Unsubscribe:** Intelligently identifies and unsubscribes from unwanted promotional emails and newsletters. It even checks for "unsubscribe" links in headers and HTML, then preserves important newsletters (like career or educational content) by classifying them with AI.
+- **Spam & Phishing Detection:** Proactively scans your inbox for suspicious emails and phishing attempts, flagging them for your review.
+- **One-Click Cleanup:** Quickly and automatically deletes old emails from categories like promotions and social, based on a configurable age (e.g., older than 7 days).
+- **Batch Processing:** Processes promotional emails in batches to ensure polite interaction with servers and stable performance.
 
-**1. Clone the Repository:**
+### Seamless Integration & Tools
+- **Interactive Chat Mode:** Engage with your inbox through a conversational chat interface to ask queries about your emails and get real-time insights.
+- **Categorization:** Automatically categorizes recent emails into groups like Work, Personal, Finance, Shopping, Social, and Other for better organization.
+- **Attachment Support:** Summarizes a variety of attachments using MarkItDown to provide a clear, readable overview of their content.
+
+---
+
+## 🔧 Installation & Setup
+
+### 1. Clone the Repository
 ```bash
-git clone https://github.com/yourusername/Open-Unroll.git
+git clone https://github.com/MR-Khan0099/Open-Unroll.git
 cd Open-Unroll
 ```
 
-**2. Install Dependencies:**
+### 2. Install Dependencies
 ```bash
 pip install -r requirements.txt
 ```
 
-**3. Environment Setup:**
-Create a `.env` file in the root directory:
-```env
-GROQ_API_KEY=your_groq_api_key_here
-```
+### 3. Get Your LangChain Groq API Key
+To use LangChain with Groq, you need an API key. Follow these steps:
+- Go to the Groq Console: [Click here to get your API key](https://console.groq.com/playground)
+- Sign in or Sign up if you haven't already.
+- Generate an API key and copy it.
+- Set up the key in your environment:
+  - If running locally, add it to your `.env` file:
+    ```env
+    GROQ_API_KEY=your_api_key_here
+    ```
+  - If deploying to a cloud service, add it to your environment variables or repository secrets.
 
-**4. Run the Application:**
+✅ Now, you're all set to use Groq with LangChain! 🚀
+
+### 4. Get Your Gmail Client Secret JSON File
+To connect to your Gmail account, you need a Client Secret JSON file. Follow these steps:
+- Go to Google API Console: [Follow this guide to download your client secret file](https://stackoverflow.com/questions/52200589/where-to-download-your-client-secret-file-json-file)
+- Enable the Gmail API for your Google Cloud project.
+- Download the `client_secret.json` file from the Credentials section.
+- The application will prompt you to upload this file when you first run the Streamlit app.
+
+✅ Now, you're ready to authenticate and interact with Gmail in your app! ✉️
+
+---
+
+## ▶️ Running the Application
 ```bash
-streamlit run src/app.py
+streamlit run app.py
 ```
 
-## 📋 Dependencies
-
-The application uses the following key libraries:
-
-- **Streamlit 1.24.0** - Web application framework
-- **LangChain 0.3.15** - LLM orchestration and prompt management
-- **LangChain-Groq 0.2.4** - Groq integration for fast inference
-- **SimpleGmail** - Gmail API wrapper for easy email access
-- **MarkItDown** - Document processing and conversion
-- **Pandas** - Data manipulation and analysis
-- **BeautifulSoup4** - HTML parsing for email content
-- **python-dotenv** - Environment variable management
-- **python-dateutil** - Advanced date/time parsing
-
-For a complete list, see `requirements.txt`.
-## � API Configuration
-
-### Get Your Groq API Key
-
-Open-Unroll uses Groq for fast AI inference. To obtain your API key:
-
-1. **Visit Groq Console**: [https://console.groq.com/playground](https://console.groq.com/playground)
-2. **Sign up/Sign in** to your account
-3. **Generate API Key** from the dashboard
-4. **Add to Environment**: 
-   ```env
-   GROQ_API_KEY=your_api_key_here
-   ```
-
-### Gmail API Setup
-
-To connect with your Gmail account:
-
-1. **Google Cloud Console**: Visit [Google API Console](https://console.developers.google.com/)
-2. **Create/Select Project**: Create a new project or select existing one
-3. **Enable Gmail API**: Search for and enable the Gmail API
-4. **Create Credentials**: 
-   - Go to "Credentials" → "Create Credentials" → "OAuth 2.0 Client IDs"
-   - Choose "Desktop Application" as application type
-   - Download the `client_secret.json` file
-5. **Upload in App**: When you first run Open-Unroll, upload your `client_secret.json` file through the interface
-
-The app will handle OAuth authentication and store your tokens securely for future use.
-
----
-
-## 🏗️ Project Structure
-
-```
-Open-Unroll/
-├── src/
-│   ├── app.py                 # Main Streamlit application
-│   └── utils/
-│       ├── tool.py           # Core Gmail management tools
-│       ├── attachment.py     # Attachment processing utilities
-│       └── utils.py          # Helper functions and utilities
-├── assets/
-│   ├── logo.png             # Application logo
-│   └── demo.mp4             # Demo video
-├── requirements.txt          # Python dependencies
-├── .env                     # Environment variables (create this)
-├── .gitignore              # Git ignore rules
-└── README.md               # This file
-```
-
----
+----
 
 ## 🎯 How to Use
 
-### 1. **Initial Setup**
+### 1. Initial Setup
 - Launch the app: `streamlit run src/app.py`
 - Upload your Gmail `client_secret.json` file
-- Complete OAuth authentication in browser
+- Complete OAuth authentication in the browser
 - Set your Groq API key in the `.env` file
 
-### 2. **Email Prioritization**
+### 2. Email Prioritization
 - Select your desired timeframe (1 hour to 2 weeks)
 - Click "Fetch & Prioritize Emails"
 - Review AI-scored important emails in the dashboard
 - Identify emails that need replies
 
-### 3. **Smart Tools**
+### 3. Smart Tools
 - **Priority Inbox**: View top 5 most important emails
 - **Categorization**: Organize emails by topic automatically
 - **Security Scan**: Detect phishing and scam attempts
 - **Cleanup Tools**: Remove spam, old promotions, and social notifications
 
-### 4. **Chat Interface**
+### 4. Chat Interface
 - Ask natural language questions about your emails
 - Get insights about specific senders, topics, or timeframes
 - Receive AI-powered summaries and recommendations
@@ -199,7 +127,6 @@ Flexible timeframe analysis for different use cases:
 - **Weekly Cleanup**: 1-2 weeks for bulk management
 - **Custom Ranges**: Adaptable to your workflow needs
 
-
 ---
 
 ## 🛡️ Security & Privacy
@@ -214,57 +141,12 @@ Open-Unroll takes your email security seriously:
 
 ---
 
+---
+
 ## 🤝 Contributing
-
-We welcome contributions to Open-Unroll! Here's how you can help:
-
-### Getting Started
-1. Fork the repository
-2. Create a feature branch: `git checkout -b feature-name`
-3. Make your changes and test thoroughly
-4. Commit with clear messages: `git commit -m "Add feature description"`
-5. Push to your fork: `git push origin feature-name`
-6. Submit a pull request
-
-### Development Guidelines
-- Follow PEP 8 style guidelines for Python code
-- Add comments for complex logic
-- Update documentation for new features
-- Test your changes with different email scenarios
-- Ensure all dependencies are properly listed
-
-### Ideas for Contributions
-- Additional email providers (Outlook, Yahoo, etc.)
-- Enhanced AI models for better categorization
-- Mobile-responsive UI improvements
-- Integration with calendar apps
-- Email templates and automation
-- Advanced analytics and reporting
+Contributions are welcome! If you’d like to improve Open-Unroll or add new features, please fork the repository and submit a pull request.
 
 ---
 
-## 📝 License
-
-This project is licensed under the **Apache License 2.0** - see the [LICENSE](LICENSE) file for details.
-
----
-
-## 🙏 Acknowledgments
-
-- **Streamlit** for the amazing web app framework
-- **LangChain** for LLM orchestration capabilities  
-- **Groq** for fast and efficient AI inference
-- **Google** for Gmail API access
-- **MarkItDown** for document processing capabilities
-
----
-
-## 📞 Support & Contact
-
-- **Issues**: Report bugs or request features via [GitHub Issues](https://github.com/yourusername/Open-Unroll/issues)
-- **Discussions**: Join community discussions in [GitHub Discussions](https://github.com/yourusername/Open-Unroll/discussions)
-- **Documentation**: Check our [Wiki](https://github.com/yourusername/Open-Unroll/wiki) for detailed guides
-
----
-
-**⭐ If you find Open-Unroll helpful, please give it a star on GitHub!**
+## 📄 License
+This project is licensed under the Apache 2.0 License.
